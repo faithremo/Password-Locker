@@ -7,3 +7,8 @@ def create_newUser(username, password):
     """
     newUser = user(username, password)
     return newUser
+
+def saveUser(user):
+    """This function saves a new user
+    """
+    user.saveUser()
