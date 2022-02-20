@@ -41,6 +41,10 @@ def display_accountsDetails():
     return userCredentials.displayCredentials()
 
 def delete_credential(credentials):
-    """This function deletes a credential from the list of credentials"""
+    """This function deletes an extisting credential from the list of credentials"""
     credentials.deleteCredentials()
     
+def find_credential(accountName):
+    """THis function searches for an account name credential and returns the credentials for that account
+    """
+    return userCredentials.findCredentials(accountName)
