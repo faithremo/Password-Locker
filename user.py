@@ -42,9 +42,9 @@ class userCredentials():
         """
         
         accountUser=""
-        for user in user.userList:
-            if (user.username == username and user.password == password):
-                accountUser == user.username
+        for User in user.userList:
+            if (User.username == username and User.password == password):
+                accountUser == User.username
         return accountUser
     
     def __init__(self, accountName, username, password):
@@ -73,7 +73,7 @@ class userCredentials():
                 return credential
     
     @classmethod
-    def if_credential_exists(cls, account):
+    def if_credential_exists(cls, accountName):
         """This method confirms if a credential exists from the credentials list and returns true or false
         """
         for credential in cls.credentialsList:
@@ -86,3 +86,9 @@ class userCredentials():
         """This method displays content in the credentials list
         """
         return cls.credentialsList
+    
+    def generate_user_password(stringLength=8):
+        """this method will generate a random password string containing digits, letters and special characters
+        """
+        password = string.digits + string.ascii_lowercase +string.ascii_uppercase + "!~@$#%&|^*"
+        return ''.join(random.choice(password) for i in range(stringLength))
