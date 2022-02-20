@@ -17,3 +17,10 @@ def displayUser():
     """This function displays an existing user
     """
     return user.displayUser()
+
+def loginUser(username, password):
+    """This function checks if a user exists then the user is loggedin
+    """
+    checkUser = userCredentials.userVerification(username, password)
+    return checkUser
+
