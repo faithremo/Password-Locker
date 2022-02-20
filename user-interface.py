@@ -24,3 +24,9 @@ def loginUser(username, password):
     checkUser = userCredentials.userVerification(username, password)
     return checkUser
 
+def create_newCredential(accountName, username, password):
+    """This function creates new credentials for a given user account
+    """
+    newCredential = userCredentials (accountName, username, password)
+    return newCredential
+
