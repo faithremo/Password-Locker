@@ -48,3 +48,8 @@ def find_credential(accountName):
     """THis function searches for an account name credential and returns the credentials for that account
     """
     return userCredentials.findCredentials(accountName)
+
+def check_credentials(accountName):
+    """This function confirms if a credential exists with that account name and either returns true or false
+    """
+    return userCredentials.if_credential_exists(accountName)
