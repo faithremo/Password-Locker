@@ -32,3 +32,10 @@ class user:
 class userCredentials():
     """create a credentials class that will enable creation of new objects of credetials
     """
+    
+    credentialsList = []
+    
+    @classmethod
+    def userVerification(cls, username, password):
+        """This is method verifies if the user is in our user list or not
+        """
