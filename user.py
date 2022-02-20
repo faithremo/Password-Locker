@@ -1,3 +1,4 @@
+from operator import truediv
 import string
 import random
 
@@ -75,3 +76,13 @@ class userCredentials():
     def if_credential_exists(cls, account):
         """This method confirms if a credential exists from the credentials list and returns true or false
         """
+        for credential in cls.credentialsList:
+            if credential.accountName == accountName:
+                return True
+        return False
+    
+    @classmethod
+    def displayCredentials(cls):
+        """This method displays content in the credentials list
+        """
+        return cls.credentialsList
