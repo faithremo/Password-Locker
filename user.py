@@ -53,4 +53,8 @@ class userCredentials():
         self.username=username
         self.password=password
         
+    def saveDetails(self):
+        """This method stores a new credential to our list of credentials.
+        """
+        userCredentials.credentialsList.append(self)
         
