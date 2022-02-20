@@ -63,3 +63,15 @@ class userCredentials():
         """
         userCredentials.credentialsList.remove(self)
         
+    @classmethod
+    def findCredentials(cls, accountName):
+        """This method uses the account name you are searching for and returns the credentials of the account name saved.
+        """
+        for credential in cls.credentialsList:
+            if credential.accountName == accountName:
+                return credential
+    
+    @classmethod
+    def if_credential_exists(cls, account):
+        """This method confirms if a credential exists from the credentials list and returns true or false
+        """
