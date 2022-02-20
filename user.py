@@ -58,3 +58,8 @@ class userCredentials():
         """
         userCredentials.credentialsList.append(self)
         
+    def deleteCredentials(self):
+        """This method deletes an existing account credentials from the list of credentials
+        """
+        userCredentials.credentialsList.remove(self)
+        
