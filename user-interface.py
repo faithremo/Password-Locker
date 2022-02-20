@@ -45,7 +45,7 @@ def delete_credential(credentials):
     credentials.deleteCredentials()
     
 def find_credential(accountName):
-    """THis function searches for an account name credential and returns the credentials for that account
+    """This function searches for an account name credential and returns the credentials for that account
     """
     return userCredentials.findCredentials(accountName)
 
@@ -53,3 +53,10 @@ def check_credentials(accountName):
     """This function confirms if a credential exists with that account name and either returns true or false
     """
     return userCredentials.if_credential_exists(accountName)
+
+def generatePassword():
+    """This function generates a random user password
+    """
+    autoPassword = userCredentials.generate_user_password()
+    return autoPassword
+
