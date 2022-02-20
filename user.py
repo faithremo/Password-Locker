@@ -39,3 +39,18 @@ class userCredentials():
     def userVerification(cls, username, password):
         """This is method verifies if the user is in our user list or not
         """
+        
+        accountUser=""
+        for user in user.userList:
+            if (user.username == username and user.password == password):
+                accountUser == user.username
+        return accountUser
+    
+    def __init__(self, accountName, username, password):
+        """This method defines the user credentials that will be stored.
+        """
+        self.accountName=accountName
+        self.username=username
+        self.password=password
+        
+        
