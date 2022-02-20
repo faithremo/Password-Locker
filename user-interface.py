@@ -12,3 +12,8 @@ def saveUser(user):
     """This function saves a new user
     """
     user.saveUser()
+
+def displayUser():
+    """This function displays an existing user
+    """
+    return user.displayUser()
