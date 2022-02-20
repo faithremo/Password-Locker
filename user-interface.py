@@ -67,8 +67,8 @@ def password_locker():
     print("To proceed, please enter: \n 1 --- To Create a new account  \n 2 --- To Login if you have an account  \n")
     
     short_code = input("").lower().strip()
-    if short_code == "1\n":
-        print("Sign Up")
+    if short_code == "1":
+        print("\nSign Up")
         print('=' * 40)
         username = input("Input your User Name:")
         while True:

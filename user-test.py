@@ -2,7 +2,7 @@ import unittest
 from user import user
 from user import userCredentials
 
-class test_class(unittest.test_case):
+class TestClass(unittest.TestCase):
     """
     This is a test class that defines test cases for the user class.
     """
@@ -26,7 +26,7 @@ class test_class(unittest.test_case):
         self.newUser.saveUser()
         self.assertEqual(len(user.userList),1)
 
-class test_credentials(unittest.test_case):
+class TestCredentials(unittest.TestCase):
     """
     This class that defines test cases for credentials class
     """ 
@@ -76,7 +76,7 @@ class test_credentials(unittest.test_case):
         self.newCredential.deleteCredentials()
         self.assertEqual(len(userCredentials.credentialsList),1)
 
-    def test_search_credentials(self):
+    def test_find_credentialr(self):
         """
         This test searches for a credential already saved by account name and returns the details of the credential
         """
@@ -84,9 +84,9 @@ class test_credentials(unittest.test_case):
         test_credential = userCredentials("Twitter","faithmakumi","1234") 
         test_credential.saveDetails()
 
-        theCredential = userCredentials.findCredentials("Twitter")
+        the_credential = userCredentials.findCredentials("Twitter")
 
-        self.assertEqual(theCredential.account,test_credential.accountName)
+        self.assertEqual(the_credential.accountName,test_credential.accountName)
 
     def test_credentialExist(self):
         """
@@ -105,4 +105,6 @@ class test_credentials(unittest.test_case):
 
         self.assertEqual(userCredentials.displayCredentials(),userCredentials.credentialsList)
         
-        
+
+if __name__ == "__main__":
+    unittest.main()        
