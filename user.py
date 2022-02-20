@@ -29,5 +29,6 @@ class user:
         user.userList.remove(self)
         
     
-    
-    
+class userCredentials():
+    """create a credentials class that will enable creation of new objects of credetials
+    """
