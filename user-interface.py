@@ -164,7 +164,8 @@ def password_locker():
         print("Please enter a valid input to proceed.")
         
 
-              
+if __name__ == "__main__":
+    password_locker()            
             
                 
             
